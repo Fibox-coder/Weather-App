@@ -80,6 +80,12 @@ body {
   font-size: 1.4rem;
 }
 
+/* Todays weather info */
+
+#error {
+  margin-top: 5px;
+}
+
 #place {
   font-size: 1.8rem;
   font-weight: 500;

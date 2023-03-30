@@ -1,5 +1,6 @@
 const searchInput = document.getElementById('searchInput');
 const searchButton = document.getElementById('searchButton');
+const errorMessage = document.getElementById('error')
 const place = document.getElementById('place')
 const day = document.getElementById('day')
 const time = document.getElementById('time')
@@ -44,8 +45,10 @@ function fetchNewLocation(location) {
         maxTempElements[i].innerHTML = `${processedData[`day${i + 1}`][1]} °C`;
         minTempElements[i].innerHTML = `${processedData[`day${i + 1}`][2]} °C`;
       }
+      errorMessage.innerHTML = ""
     })
     .catch(function (error) {
+      errorMessage.innerHTML = "Location not found."
       console.log(error);
     });
 }
