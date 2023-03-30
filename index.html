@@ -11,22 +11,49 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="info-container">
-    <div class="search-container">
-      <input type="text" id="searchInput" placeholder="Search Location...">
-      <img src="images/icons/search-icon.png" id="searchButton" alt="Search-icon">
+  <div class="upper-container">
+    <div class="info-container">
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search Location...">
+        <img src="images/icons/search-icon.png" id="searchButton" alt="Search-icon">
+      </div>
+      <div id="place" class="space-between"></div>
+      <div id="day" class="space-between"></div>
+      <div id="time"></div>
+      <div id="temperature" class="space-between"></div>
+      <div id="weatherCondition" class="space-between"></div>
     </div>
-    <div id="place"></div>
-    <div id="time"></div>
-    <div id="temperature"></div>
-    <div id="weatherCondition"></div>
-  </div>
-  <div class="extra-info-container">
+    <div class="extra-info-container">
 
-    <div id="temperatureFeelsLike"></div>
-    <div id="humidity"></div>
-    <div id="windSpeed"></div>
+      <div class="icon-text-container">
+        <img src="images/icons/thermo.svg" alt="thermo icon" class="weather-icon">
+        <div class="weather-detail-container">
+          <div class="text">Feels Like</div>
+          <div id="temperatureFeelsLike"></div>
+        </div>
+      </div>
+
+      <div class="icon-text-container space-between">
+        <img src="images/icons/humidity.svg" alt="thermo icon" class="weather-icon">
+        <div class="weather-detail-container">
+          <div class="text">humidity</div>
+          <div id="humidity"></div>
+        </div>
+      </div>
+
+      <div class="icon-text-container space-between">
+        <img src="images/icons/wind.svg" alt="thermo icon" class="weather-icon">
+        <div class="weather-detail-container">
+          <div class="text">windSpeed</div>
+          <div id="windSpeed"></div>
+        </div>
+      </div>
+    </div>
   </div>
+
+    <div class="lower-container" id="lower-container">
+  </div>
+  
 <script src="main.js"></script>
 </body>
 </html>
