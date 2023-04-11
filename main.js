@@ -40,7 +40,7 @@ function fetchNewLocation(location) {
       const maxTempElements = document.querySelectorAll('[class^="forecast-temperature-max-"]');
       const minTempElements = document.querySelectorAll('[class^="forecast-temperature-min-"]');
 
-      for (let i = 0; i < 6; i++) {
+      for (let i = 0; i < 2; i++) {
         dayElements[i].innerHTML = getDayOfWeek(processedData[`day${i + 1}`][0]);
         maxTempElements[i].innerHTML = `${processedData[`day${i + 1}`][1]} °C`;
         minTempElements[i].innerHTML = `${processedData[`day${i + 1}`][2]} °C`;
@@ -67,10 +67,10 @@ function processWeatherData(data) {
   /* Forecast */
   const day1 = [data.forecast.forecastday[1].date, data.forecast.forecastday[1].day.maxtemp_c, data.forecast.forecastday[1].day.mintemp_c];
   const day2 = [data.forecast.forecastday[2].date, data.forecast.forecastday[2].day.maxtemp_c, data.forecast.forecastday[2].day.mintemp_c];
-  const day3 = [data.forecast.forecastday[3].date, data.forecast.forecastday[3].day.maxtemp_c, data.forecast.forecastday[3].day.mintemp_c];
-  const day4 = [data.forecast.forecastday[4].date, data.forecast.forecastday[4].day.maxtemp_c, data.forecast.forecastday[4].day.mintemp_c];
-  const day5 = [data.forecast.forecastday[5].date, data.forecast.forecastday[5].day.maxtemp_c, data.forecast.forecastday[5].day.mintemp_c];
-  const day6 = [data.forecast.forecastday[6].date, data.forecast.forecastday[6].day.maxtemp_c, data.forecast.forecastday[6].day.mintemp_c];
+  // const day3 = [data.forecast.forecastday[3].date, data.forecast.forecastday[3].day.maxtemp_c, data.forecast.forecastday[3].day.mintemp_c];
+  // const day4 = [data.forecast.forecastday[4].date, data.forecast.forecastday[4].day.maxtemp_c, data.forecast.forecastday[4].day.mintemp_c];
+  // const day5 = [data.forecast.forecastday[5].date, data.forecast.forecastday[5].day.maxtemp_c, data.forecast.forecastday[5].day.mintemp_c];
+  // const day6 = [data.forecast.forecastday[6].date, data.forecast.forecastday[6].day.maxtemp_c, data.forecast.forecastday[6].day.mintemp_c];
 
   const processedData = {
     /* Now */
@@ -85,10 +85,10 @@ function processWeatherData(data) {
     /* Forecast */
     day1,
     day2,
-    day3,
-    day4,
-    day5,
-    day6,
+    // day3,
+    // day4,
+    // day5,
+    // day6,
   };
 
   return processedData
